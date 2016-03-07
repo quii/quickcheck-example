@@ -26,8 +26,8 @@ func TestAddingZeroMakesNoDifference(t *testing.T) {
 }
 
 func TestAssociativity(t *testing.T) {
-	assertion := func(x int) bool {
-		return add(add(x, 1), 1) == add(x, 2)
+	assertion := func(x, y, z int) bool {
+		return add(add(x, y), z) == add(add(z, y), x)
 	}
 
 	if err := quick.Check(assertion, nil); err != nil {
