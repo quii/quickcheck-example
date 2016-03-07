@@ -9,7 +9,7 @@ func add(x, y int) int {
 	return x + y
 }
 
-func TestAddingEx1(t *testing.T) {
+func TestAddingExample(t *testing.T) {
 	if add(3, 2) != 5 {
 		t.Error("3 plus 2 is 5")
 	}
